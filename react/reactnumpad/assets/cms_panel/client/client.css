@@ -1,0 +1,579 @@
+/*body {*/
+  /*text-align: center;*/
+  /*margin: 0;*/
+  /*background: url(logo.png) top center no-repeat, url(whitey.png) center top repeat;*/
+/*}*/
+.client-layout{
+    text-align: center;
+}
+#log {
+  max-width: 100%;
+  min-height: 25px;
+  background: #404040;
+  padding: 10px;
+  /*margin-left: -243px;*/
+  margin: 25px auto 0 auto;
+  border: 1px solid #d4d4d4;
+  text-decoration: none;
+  font:18px/normal sans-serif;
+  color: white;
+  white-space: nowrap;
+  outline: none;
+  background-color: #404040;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#000), to(#404040));
+  background-image: -moz-linear-gradient(#000, #404040);
+  background-image: -o-linear-gradient(#000, #404040);
+  background-image: linear-gradient(#000, #404040);
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  -o-background-clip: padding-box;
+  /*background-clip: padding-box;*/ /* commented out due to Opera 11.10 bug */
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  line-height: 25px;
+  border-radius: 5px;
+  /* IE hacks */
+  zoom: 1;
+  *display: inline;
+}
+
+#people {
+    position:fixed;
+    bottom:0px;
+    right: 0px;
+    height:100%;
+    width:200px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family:'Helvetica','Arial';
+    text-align: left;
+    background-color:#ee0000 !important;
+    border:none !important;
+    overflow: auto;
+    overflow-x: hidden;
+
+}
+
+#people li {
+    position:relative;
+    width: 100%;
+    display:block;
+    color:#eee !important;
+    background-color:#ff0000!important;
+    border:solid 1px #ee0000 !important;
+    padding: 0.5em 0 0.5em 1em;
+    background: #f7f2ea;
+    cursor: pointer;
+}
+
+#people li:HOVER {
+    color: #fff;
+    background-color:#dd0000!important;
+}
+
+#people li:ACTIVE {
+    color: #fff;
+    background-color:#C00 !important;
+}
+
+
+
+
+/* ------------------------------------------
+CSS3 GITHUB BUTTONS (Nicolas Gallagher)
+Licensed under Unlicense
+http://github.com/necolas/css3-github-buttons
+------------------------------------------ */
+
+
+/* ------------------------------------------------------------------------------------------------------------- BUTTON */
+
+button.call, button.hangup, input {
+    -moz-box-shadow: 1px 2px 10px #BBB;
+    -webkit-box-shadow: 1px 2px 10px #BBB;
+    box-shadow: 1px 2px 10px #BBB;
+}
+
+button.call, button.hangup {
+    position: relative;
+    overflow: visible;
+    display: inline-block;
+    padding: 0.5em 1em;
+    border: 1px solid #d4d4d4;
+    /*margin: 30px 0 0 0;*/
+    text-decoration: none;
+    text-shadow: 1px 1px 0 #fff;
+    font:35px/normal sans-serif;
+    font-weight: bold;
+    color: #333;
+    white-space: nowrap;
+    cursor: pointer;
+    outline: none;
+    background-color: #ececec;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f4f4f4), to(#ececec));
+    background-image: -moz-linear-gradient(#f4f4f4, #ececec);
+    background-image: -o-linear-gradient(#f4f4f4, #ececec);
+    background-image: linear-gradient(#f4f4f4, #ececec);
+    -webkit-background-clip: padding;
+    -moz-background-clip: padding;
+    -o-background-clip: padding-box;
+    /*background-clip: padding-box;*/ /* commented out due to Opera 11.10 bug */
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    /* IE hacks */
+    zoom: 1;
+    *display: inline;
+}
+
+button.call:hover,
+button.call:focus,
+button.call:active,
+button.call.active,
+button.hangup:hover,
+button.hangup:focus,
+button.hangup:active,
+button.hangup.active {
+    border-color: #3072b3;
+    border-bottom-color: #2a65a0;
+    text-decoration: none;
+    text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
+    color: #fff;
+    background-color: #3C8DDE;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ff0000), to(#dd0000));
+    background-image: -moz-linear-gradient(#599bdc, #3072b3);
+    background-image: -o-linear-gradient(#599bdc, #3072b3);
+    background-image: linear-gradient(#599bdc, #3072b3);
+}
+
+button.call:active,
+button.call.active,
+button.hangup:active,
+button.hangup.active {
+    border-color: #2a65a0;
+    border-bottom-color: #3884CF;
+    background-color: #3072b3;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#3072b3), to(#599bdc));
+    background-image: -moz-linear-gradient(#3072b3, #599bdc);
+    background-image: -o-linear-gradient(#3072b3, #599bdc);
+    background-image: linear-gradient(#3072b3, #599bdc);
+}
+
+/* overrides extra padding on button elements in Firefox */
+button.call::-moz-focus-inner,
+button.hangup::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+input {
+  display: block;
+  /*margin: 25px auto 0 auto;*/
+  outline: none;
+  border: 0px solid #999;
+  line-height: 1.4em;
+  font-size: 1.2em;
+  padding: 10px;
+  width: 100%;
+}
+
+/* ............................................................................................................. Icons */
+
+button.call:before,
+button.hangup:before {
+    content: "";
+    position: relative;
+    top: 1px;
+    float:left;
+    width: 44px;
+    height: 37px;
+    margin: 0 0.75em 0 -0.25em;
+    background: url(buttons.png) 0 99px no-repeat;
+}
+
+button.call:before { background-position: 0 -48px; }
+button.call:hover:before,
+button.call:focus:before,
+button.call:active:before { background-position: 0 0; }
+
+button.hangup {
+   margin-left: 25px;
+}
+
+button.hangup:before { background-position: 0 -131px; }
+button.hangup:hover:before,
+button.hangup:focus:before,
+button.hangup:active:before { background-position: 0 -88px; }
+
+/*#########################################################*/
+.log-row {
+    padding: 5px 0px;
+    border-bottom: 1px dashed #d6cece;
+}
+button.call,button.hangup{
+    margin: 0px 0 0 0 !important;
+}
+
+.onoffswitch {
+    position: relative; width: 90px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+
+.onoffswitch-checkbox-status {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    height: 30px; padding: 0; line-height: 30px;
+    border: 0px solid #999999; border-radius: 25px;
+    background-color: #FF0000;
+}
+.onoffswitch-label:before {
+    content: "";
+    display: block; width: 25px; margin: 2.5px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 56px;
+    border-radius: 25px;
+    box-shadow: 0 6px 12px 0px #757575;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label {
+    background-color: #6DCC42;
+}
+.onoffswitch-checkbox-status:checked + .onoffswitch-label {
+    background-color: #6DCC42;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label, .onoffswitch-checkbox:checked + .onoffswitch-label:before {
+    border-color: #6DCC42;
+}
+.onoffswitch-checkbox-status:checked + .onoffswitch-label, .onoffswitch-checkbox:checked + .onoffswitch-label:before {
+    border-color: #6DCC42;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox-status:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label:before {
+    right: 0px;
+    background-color: #FFFFFF;
+    box-shadow: 3px 6px 18px 0px rgba(0, 0, 0, 0.2);
+}
+.onoffswitch-checkbox-status:checked + .onoffswitch-label:before {
+    right: 0px;
+    background-color: #FFFFFF;
+    box-shadow: 3px 6px 18px 0px rgba(0, 0, 0, 0.2);
+}
+
+.client-logs .panel-body{
+    max-height: 400px;
+    overflow-y: scroll;
+    min-height: 250px;
+}
+
+.call-time-span{
+    background-color: #f5f5f5;
+    padding: 3px;
+}
+.call-start{
+    font-size: 0.8em;
+}
+.status-layout{
+    display: inline-block;
+}
+.led-red {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 12px;
+    height: 12px;
+    background-color: #940;
+    border-radius: 50%;
+    display: inline-block;
+}
+.led-green {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 12px;
+    height: 12px;
+    background-color: #690;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+
+
+/*dialpad*/
+div#keyboard {
+    margin: 25px;
+    /*width:400px;*/
+    height:200px;
+
+    margin: 25px auto 0 auto;
+    display: none;
+}
+ol.keys {
+    list-style-type:none;
+}
+
+ol.keys li {
+    width:33.33333333333333%;
+    display:block;
+    text-align:center;
+    height:2em;
+    float:left;
+    font-size:1.3em;
+    font-family:sans-serif;
+    padding-top:.5em;
+    border:1px solid rgb(100,100,100);
+    color:white;
+    background-color:rgba(0,0,0,.8);
+}
+
+ol.keys li:hover {
+    cursor:pointer;
+}
+ol.keys li:active {
+    background-color:rgb(200,200,200);
+    color:#000;
+}
+#display {
+    clear:both;
+    width:300px;
+    margin:0 auto;
+    display:block;
+    background-color:rgba(0,0,0,.9);
+    color:white;
+    font-family:'Helvetica';
+    font-size:2em;
+    margin-top:4em;
+    padding:.3em;
+    height:1.3em;
+}
+
+.number{
+    display: none;
+}
+
+
+.dialpad-container p,
+.dialpad-container blockquote,
+.dialpad-container pre,
+.dialpad-container a,
+.dialpad-container abbr,
+.dialpad-container acronym,
+.dialpad-container address,
+.dialpad-container big,
+.dialpad-container cite,
+.dialpad-container code,
+.dialpad-container del,
+.dialpad-container dfn,
+.dialpad-container em,
+.dialpad-container img,
+.dialpad-container ins,
+.dialpad-container kbd,
+.dialpad-container q,
+.dialpad-container s,
+.dialpad-container samp,
+.dialpad-container small,
+.dialpad-container strike,
+.dialpad-container strong,
+.dialpad-container sub,
+.dialpad-container sup,
+.dialpad-container tt,
+.dialpad-container var,
+.dialpad-container b,
+.dialpad-container u,
+.dialpad-container center,
+.dialpad-container dl,
+.dialpad-container dt,
+.dialpad-container dd,
+.dialpad-container ol,
+.dialpad-container ul,
+.dialpad-container li,
+.dialpad-container fieldset,
+.dialpad-container form,
+.dialpad-container label,
+.dialpad-container legend,
+.dialpad-container table,
+.dialpad-container caption,
+.dialpad-container tbody,
+.dialpad-container tfoot,
+.dialpad-container thead,
+.dialpad-container tr,
+.dialpad-container th,
+.dialpad-container td,
+.dialpad-container article,
+.dialpad-container aside,
+.dialpad-container canvas,
+.dialpad-container details,
+.dialpad-container embed,
+.dialpad-container figure,
+.dialpad-container figcaption,
+.dialpad-container footer,
+.dialpad-container header,
+.dialpad-container hgroup,
+.dialpad-container menu,
+.dialpad-container nav,
+.dialpad-container output,
+.dialpad-container ruby
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline
+}
+.dialpad-container ol,
+.dialpad-container ul {
+    list-style: none
+}
+
+.dialpad-container html,
+.dialpad-container button,
+.dialpad-container input,
+.dialpad-container select,
+.dialpad-container textarea {
+    color: #222
+}
+
+.dialpad .number {
+    position: relative;
+    z-index: 2;
+    padding: 15px 20px;
+    color: #4d4d4d;
+    font-weight: 300;
+    font-size: 40px;
+    background: #fff;
+    height: 78px
+}
+
+.dialpad .dials {
+    margin: -1px 0 0 -1px;
+    background: #1d1918;
+    cursor: pointer
+}
+
+.dialpad .dials:before,
+.dialpad .dials:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden
+}
+
+.dialpad .dials:after {
+    clear: both
+}
+
+.dialpad .dials .digits {
+    float: left;
+    width: 33.33%
+}
+
+.dialpad .dials .digits p {
+    font-weight: 600;
+    padding: 15px 25px;
+    border-top: 1px solid #4d4d4d;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+    border-left: 1px solid #4d4d4d
+}
+
+.dialpad .dials .digits p strong {
+    font-size: 50px;
+    margin-right: 8px;
+    color: #fff
+}
+
+.dialpad .dials .digits:active {
+    background: #00caf2;
+    border-top-color: #b2f2ff
+}
+
+.compact .dials .digits p {
+    padding: 15px 10px;
+    max-height: 75px;
+}
+
+.compact .dials .digits p strong {
+    font-size: 30px
+}
+
+.compact .dials .digits p sup {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 0.9em;
+}
+
+.compact .dials .pad-action {
+    background: #45ad3b
+}
+
+.compact .dials .pad-action:active {
+    background: #093
+}
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto
+}
+
+.invisible {
+    visibility: hidden
+}
+.compact .dials .pad-action.hangout {
+    background: #ce170d;
+}
+.compact .dials .pad-action.hangout:active {
+    background: #ac0031;
+}
+/*end dialpad*/
+
+
+
+
+.dialpad .dials .digits.active {
+    background: #00caf2;
+    border-top-color: #b2f2ff;
+}

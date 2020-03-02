@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap");
+.bg-login .bg-blur:before {
+  background: url(../img/bg.jpg) fixed no-repeat;
+  background-size: cover; }
+.bg-login .login-screen {
+  background: rgba(255, 255, 255, 0.3); }
+.bg-login .panel-login .panel-body label {
+  color: #412129; }
+.bg-login .panel-login .panel-body .extra-links li a {
+  color: #412129; }
+
+.inputer .input-wrapper:after {
+  background: #412129; }
+
+.alert-danger-transparent {
+  height: 15px; }
+  .alert-danger-transparent strong {
+    font-size: 12px;
+    height: 15px; }
+
+/*# sourceMappingURL=login.css.map */

@@ -1,0 +1,206 @@
+.dialpad-container p,
+.dialpad-container blockquote,
+.dialpad-container pre,
+.dialpad-container a,
+.dialpad-container abbr,
+.dialpad-container acronym,
+.dialpad-container address,
+.dialpad-container big,
+.dialpad-container cite,
+.dialpad-container code,
+.dialpad-container del,
+.dialpad-container dfn,
+.dialpad-container em,
+.dialpad-container img,
+.dialpad-container ins,
+.dialpad-container kbd,
+.dialpad-container q,
+.dialpad-container s,
+.dialpad-container samp,
+.dialpad-container small,
+.dialpad-container strike,
+.dialpad-container strong,
+.dialpad-container sub,
+.dialpad-container sup,
+.dialpad-container tt,
+.dialpad-container var,
+.dialpad-container b,
+.dialpad-container u,
+.dialpad-container center,
+.dialpad-container dl,
+.dialpad-container dt,
+.dialpad-container dd,
+.dialpad-container ol,
+.dialpad-container ul,
+.dialpad-container li,
+.dialpad-container fieldset,
+.dialpad-container form,
+.dialpad-container label,
+.dialpad-container legend,
+.dialpad-container table,
+.dialpad-container caption,
+.dialpad-container tbody,
+.dialpad-container tfoot,
+.dialpad-container thead,
+.dialpad-container tr,
+.dialpad-container th,
+.dialpad-container td,
+.dialpad-container article,
+.dialpad-container aside,
+.dialpad-container canvas,
+.dialpad-container details,
+.dialpad-container embed,
+.dialpad-container figure,
+.dialpad-container figcaption,
+.dialpad-container footer,
+.dialpad-container header,
+.dialpad-container hgroup,
+.dialpad-container menu,
+.dialpad-container nav,
+.dialpad-container output,
+.dialpad-container ruby
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline
+}
+.dialpad-container ol,
+.dialpad-container ul {
+    list-style: none
+}
+
+.dialpad-container html,
+.dialpad-container button,
+.dialpad-container input,
+.dialpad-container select,
+.dialpad-container textarea {
+    color: #222
+}
+
+.dialpad .number {
+    position: relative;
+    z-index: 2;
+    padding: 15px 20px;
+    color: #4d4d4d;
+    font-weight: 300;
+    font-size: 40px;
+    background: #fff;
+    height: 78px
+}
+
+.dialpad .dials {
+    margin: -1px 0 0 -1px;
+    background: #1d1918;
+    cursor: pointer
+}
+
+.dialpad .dials:before,
+.dialpad .dials:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden
+}
+
+.dialpad .dials:after {
+    clear: both
+}
+
+.dialpad .dials .digits {
+    float: left;
+    width: 33.33%
+}
+
+.dialpad .dials .digits p {
+    font-weight: 600;
+    padding: 15px 25px;
+    border-top: 1px solid #4d4d4d;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+    border-left: 1px solid #4d4d4d
+}
+
+.dialpad .dials .digits p strong {
+    font-size: 50px;
+    margin-right: 8px;
+    color: #fff
+}
+
+.dialpad .dials .digits:active {
+    background: #00caf2;
+    border-top-color: #b2f2ff
+}
+
+.compact .dials .digits p {
+    padding: 25px 15px
+}
+
+.compact .dials .digits p strong {
+    font-size: 30px
+}
+
+.compact .dials .digits p sup {
+    text-transform: uppercase;
+    color: #c1c1c1
+}
+
+.compact .dials .pad-action {
+    background: #12cc00
+}
+
+.compact .dials .pad-action:active {
+    background: #093
+}
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto
+}
+
+.invisible {
+    visibility: hidden
+}
+.compact .dials .pad-action.hangout {
+    background: #ce170d;
+}
+.compact .dials .pad-action.hangout:active {
+    background: #ac0031;
+}

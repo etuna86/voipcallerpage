@@ -1,0 +1,110 @@
+@font-face {
+    font-family: "arabicfont";
+    src: url("../fonts/DroidKufi-Regular.ttf");
+}
+body{
+    font-family: "arabicfont";
+}
+
+/* ################# START for arabic Direction */
+.qq-upload-button{
+    float: right !important;
+}
+th {
+    text-align: right;
+}
+.delete-confirmation.modal .modal-footer,.delete-multiple-confirmation.modal .modal-footer{
+    direction: ltr;
+}
+.delete-confirmation.modal button.close,.delete-multiple-confirmation.modal button.close{
+    float: left;
+}
+.container.gc-container .floatL{
+    float: right !important;
+}
+.container.gc-container .floatR{
+    float: left !important;
+}
+.container.gc-container .footer-tools .dropdown-menu.dropdown-menu-right{
+    right: -103px;
+}
+
+.chosen-container-single .chosen-single abbr{
+    left: 8px;
+    right: auto !important;
+}
+.chosen-container-single .chosen-drop {
+    /*left: auto !important;*/
+    /*right: -9999px ;*/
+}
+.chosen-container-single .chosen-single-with-deselect span ,.chosen-container-single .chosen-single-with-deselect span{
+    margin-right: 23px !important;
+}
+
+.chosen-container .chosen-drop {
+    position: absolute;
+    top: 100%;
+    left: 9999px;
+    z-index: 1010;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    border-top: 0;
+    background: #d1d0d0;
+}
+.chosen-container.chosen-with-drop .chosen-drop{
+
+}
+
+.chosen-container.chosen-container-single{
+    direction: ltr !important;
+}
+.nav-sm ul.nav.child_menu{
+    right: 100%;
+    left: auto;
+}
+
+.nav.navbar-nav.navbar-left{
+    padding-left: 15px;
+}
+
+.chosen-container.chosen-container-single{
+    min-width: 300px;
+}
+.img-circle.profile_img{
+    margin-right: 15%;
+}
+
+
+.jconfirm-box-container{
+    float: left;
+}
+.row {
+    max-width: 100%;
+}
+
+
+.dataTables_wrapper .dataTables_filter{
+    width: 65% !important;
+}
+.dataTables_wrapper .dataTables_filter input{
+    margin-right: 10px;
+}
+.dataTables_wrapper .col-sm-6,.dataTables_wrapper .col-sm-5,.dataTables_wrapper .col-sm-7{
+    float: left;
+}
+
+.chosen-container-single.chosen-container-single-nosearch .chosen-search{
+    left: 9999px !important;
+}
+
+.nav.child_menu li {
+    padding-left: 5px;
+}
+
+.active a span.fa {
+    margin-left: 0px;
+}
+
+/* ############## END for arabic */

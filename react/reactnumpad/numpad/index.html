@@ -1,0 +1,34 @@
+<html>
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/numpad.css">
+    <link rel="stylesheet" href="iconicicons/css/ionicons.min.css">
+</head>
+<body>
+    <div class="numpad-section">
+        <input class="number-input" onkeypress="getkeyValue(event);" id="phonenumber" type="text" placeholder="Enter a phone number to call"  />
+        <div class="numpad" id="1" onclick="getNumber(this)" value="1"><span>1</span></div>
+        <div class="numpad" id="2"  onclick="getNumber(this)" value="2" ><span>2</span></div>
+        <div class="numpad" id="3" onclick="getNumber(this)" value="3"><span>3</span></div>
+        <div class="numpad" id="4" onclick="getNumber(this)" value="4"><span>4</span></div>
+        <div class="numpad" id="5"  onclick="getNumber(this)" value="5" ><span>5</span></div>
+        <div class="numpad" id="6" onclick="getNumber(this)" value="6"><span>6</span></div>
+        <div class="numpad" id="7" onclick="getNumber(this)" value="7"><span>7</span></div>
+        <div class="numpad" id="8"  onclick="getNumber(this)" value="8" ><span>8</span></div>
+        <div class="numpad" id="9" onclick="getNumber(this)" value="9"><span>9</span></div>
+        <div class="numpad" id="*" onclick="getNumber(this)" value="*"><span>*</span></div>
+        <div class="numpad" id="0" onclick="getNumber(this)" value="0"><span>0</span></div>
+        <div class="numpad" id="#" onclick="getNumber(this)" value="#"><span>#</span></div>
+        <div class="numpad" id="yes" onclick="numberCall(this)" value="yes"><span><ion-icon name="call"></ion-icon></span></div>
+        <div class="numpad" id="backspace" onclick="removeLastIndex()" value="backspace"><span><ion-icon name="backspace"></ion-icon></span></div>
+        <div class="numpad" id="No" onclick="closeCall(this)" value="No"><span><ion-icon name="close"></ion-icon></span></div>
+    </div>
+    <a href="tel:"></a>
+</body>
+<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+<script src="js/numpad.js"></script>
+</html>

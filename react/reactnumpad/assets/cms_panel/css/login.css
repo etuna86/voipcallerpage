@@ -1,0 +1,21 @@
+body{
+	padding-top: 12%;
+}
+.form_login{
+	direction:rtl;
+}
+.form_login .panel-title{
+	font-size:25px;
+}
+.form_login .form-control{
+	margin-top: 10px;
+}
+.form_login .span-label{
+	font-size:15px;
+}
+.form_login .panel-footer{
+	direction:ltr;
+}
+#btn_login{
+	font-weight: bold;
+}

@@ -1,0 +1,2 @@
+var PanelOffline={checkStatus:function(){Offline.options={checkOnLoad:true,reconnect:{initialDelay:3,delay:10}}
+setInterval(function(){Offline.check();},3000);Offline.on('down',function(){toastr.error('A connection test has failed, fired even if the connection was already down');});Offline.on('up',function(){toastr.success('A connection test has succeeded, fired even if the connection was already up');});},init:function(){this.checkStatus();}}

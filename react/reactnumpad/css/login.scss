@@ -1,0 +1,44 @@
+@import 'style-variables.scss';
+
+.bg-login {
+  .bg-blur{
+    &:before{
+      background: url(../img/bg.jpg) fixed no-repeat;
+      background-size: cover;
+    }
+  }
+  .login-screen{
+    background: $whitecolorpacity03;
+  }
+
+  .panel-login {
+    .panel-body {
+      label{
+        color:$heightRedColor;
+      }
+      .extra-links {
+        li {
+          a{
+            color:$heightRedColor;
+          }
+        }
+      }
+    }
+  }
+
+
+}
+.inputer {
+  .input-wrapper{
+    &:after{
+      background: $heightRedColor;
+    }
+  }
+}
+.alert-danger-transparent{
+  height: 15px;
+  strong{
+    font-size: 12px;
+    height: 15px;
+  }
+}

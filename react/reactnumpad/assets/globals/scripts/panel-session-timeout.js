@@ -1,0 +1,1 @@
+var PanelSessionTimeout={checkSessionTimeout:function(){$.sessionTimeout({keepAlive:true,keepAliveUrl:'demo/keep-alive.html',message:'Your session will be locked in one minute.',logoutUrl:'user-login.html',redirUrl:'user-lock-screen.html',warnAfter:3000,redirAfter:6000});},init:function(){this.checkSessionTimeout();}}

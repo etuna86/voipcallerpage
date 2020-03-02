@@ -1,0 +1,58 @@
+
+.form-container.table-container .form-group .col-sm-3.control-label{
+    /*text-align: left;*/
+}
+.nav.side-menu > li > a:hover, .nav > li > a:focus {
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+.number-selected-company-layout{
+    margin-top: 20px !important;
+    border-top: 1px solid silver;
+    padding-top: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    padding-right: 23px;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+}
+.nav-sm span.fa, .nav-sm .menu_section .number-selected-company-layout{
+  display: none;
+}
+
+.number-selected-company-layout .label{
+    font-size: 1em;
+}
+.select-company-popup-open{
+    cursor: pointer;
+}
+.text-danger-important{
+    color : #a94442 !important;
+}
+#search-table-input {
+    background-image: url('../images/searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+}
+.site_title{
+    font-size:1em;
+}
+.overflowIt{
+  overflow-y: auto; max-height: 400px;overflow-x: hidden;
+}
+.table-label {
+    background: #29C8DA   !important;
+    color: #fff;
+}
+.form-control-feedback{
+    left : 0;
+    right: auto;
+    color: #2a3f54;
+}

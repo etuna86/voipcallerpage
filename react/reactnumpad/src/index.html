@@ -1,0 +1,590 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="icon" href="img/extra_tap.png" sizes="16x16" type="image/png">
+    <link rel="apple-touch-icon" href="assets/globals/img/icons/apple-touch-icon.png">
+    <link rel="stylesheet" href="css/numpad.css" />
+    <link rel="stylesheet" href="assets/admin1/css/admin1.css">
+    <link rel="stylesheet" href="assets/globals/css/elements.css">
+    <link rel="stylesheet" href="assets/globals/plugins/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.min.css">
+    <link rel="stylesheet" href="assets/globals/plugins/switchery/dist/switchery.min.css">
+    <link rel="stylesheet" href="assets/globals/css/plugins.css" >
+
+    <script src="assets/globals/plugins/modernizr/modernizr.min.js"></script>
+    <link rel="stylesheet" href="css/callperson.css">
+    <link rel="stylesheet" href="css/elements.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="assets/globals/plugins/bootstrap-social/bootstrap-social.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome-4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="numpad/iconicicons/css/ionicons.min.css">
+
+</head>
+<body class="bg-login printable">
+
+<div id="root"></div>
+<!--<script src="assets/globals/js/global-vendors.js"></script>-->
+
+<script src="js/global-vendors.js"></script>
+<script src="assets/globals/plugins/bootstrap-switch/dist/js/bootstrap-switch.min.js"></script>
+
+<!--<script src="assets/globals/js/pleasure.js"></script> -->
+
+<!--<script src="assets/admin1/js/layout.js"></script>-->
+
+<script src="js/callperson.js"></script>
+<script src="js/layout.js"></script>
+<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+<!--<script src="numpad/js/numpad.js"></script>-->
+<script src="assets/globals/scripts/user-pages.js"></script>
+
+<script src="assets/globals/plugins/switchery/dist/switchery.min.js"></script>
+
+<script src="assets/globals/scripts/forms-switch.js"></script>
+<script src="assets/globals/scripts/forms-switchery.js"></script>
+<!--<script type="text/javascript" src="/react-numpad.js"></script>-->
+<script src="js/main.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/reactstrap/4.8.0/reactstrap.min.js"></script>-->
+<!--<script src="assets/cms_panel/theme/vendors/Chart.js"></script>
+<script src="assets/cms_panel/theme/vendors/echarts/dist/echarts.js"></script> -->
+
+
+<script>
+    $(document).ready(function () {
+        Callperson.init();
+        Layout.init();
+        FormsSwitch.init();
+        FormsSwitchery.init();
+        //Index.init();
+        //WidgetAudio.single();
+        //ChartsKnob.init();
+        UserPages.login();
+    });
+</script>
+<script src="assets/cms_panel/theme/vendors/echarts/map/js/world.js"></script>
+<script>
+
+    var theme = {
+        color: [
+            '#26B99A', '#34495E', '#BDC3C7', '#3498DB',
+            '#9B59B6', '#8abb6f', '#759c6a', '#bfd3b7'
+        ],
+
+        title: {
+            itemGap: 8,
+            textStyle: {
+                fontWeight: 'normal',
+                color: '#408829'
+            }
+        },
+
+        dataRange: {
+            color: ['#1f610a', '#97b58d']
+        },
+
+        toolbox: {
+            color: ['#408829', '#408829', '#408829', '#408829']
+        },
+
+        tooltip: {
+            backgroundColor: 'rgba(0,0,0,0.5)',
+            axisPointer: {
+                type: 'line',
+                lineStyle: {
+                    color: '#408829',
+                    type: 'dashed'
+                },
+                crossStyle: {
+                    color: '#408829'
+                },
+                shadowStyle: {
+                    color: 'rgba(200,200,200,0.3)'
+                }
+            }
+        },
+
+        dataZoom: {
+            dataBackgroundColor: '#eee',
+            fillerColor: 'rgba(64,136,41,0.2)',
+            handleColor: '#408829'
+        },
+        grid: {
+            borderWidth: 0
+        },
+
+        categoryAxis: {
+            axisLine: {
+                lineStyle: {
+                    color: '#408829'
+                }
+            },
+            splitLine: {
+                lineStyle: {
+                    color: ['#eee']
+                }
+            }
+        },
+
+        valueAxis: {
+            axisLine: {
+                lineStyle: {
+                    color: '#408829'
+                }
+            },
+            splitArea: {
+                show: true,
+                areaStyle: {
+                    color: ['rgba(250,250,250,0.1)', 'rgba(200,200,200,0.1)']
+                }
+            },
+            splitLine: {
+                lineStyle: {
+                    color: ['#eee']
+                }
+            }
+        },
+        timeline: {
+            lineStyle: {
+                color: '#408829'
+            },
+            controlStyle: {
+                normal: {color: '#408829'},
+                emphasis: {color: '#408829'}
+            }
+        },
+
+        k: {
+            itemStyle: {
+                normal: {
+                    color: '#68a54a',
+                    color0: '#a9cba2',
+                    lineStyle: {
+                        width: 1,
+                        color: '#408829',
+                        color0: '#86b379'
+                    }
+                }
+            }
+        },
+        map: {
+            itemStyle: {
+                normal: {
+                    areaStyle: {
+                        color: '#ddd'
+                    },
+                    label: {
+                        textStyle: {
+                            color: '#c12e34'
+                        }
+                    }
+                },
+                emphasis: {
+                    areaStyle: {
+                        color: '#99d2dd'
+                    },
+                    label: {
+                        textStyle: {
+                            color: '#c12e34'
+                        }
+                    }
+                }
+            }
+        },
+        force: {
+            itemStyle: {
+                normal: {
+                    linkStyle: {
+                        strokeColor: '#408829'
+                    }
+                }
+            }
+        },
+        chord: {
+            padding: 4,
+            itemStyle: {
+                normal: {
+                    lineStyle: {
+                        width: 1,
+                        color: 'rgba(128, 128, 128, 0.5)'
+                    },
+                    chordStyle: {
+                        lineStyle: {
+                            width: 1,
+                            color: 'rgba(128, 128, 128, 0.5)'
+                        }
+                    }
+                },
+                emphasis: {
+                    lineStyle: {
+                        width: 1,
+                        color: 'rgba(128, 128, 128, 0.5)'
+                    },
+                    chordStyle: {
+                        lineStyle: {
+                            width: 1,
+                            color: 'rgba(128, 128, 128, 0.5)'
+                        }
+                    }
+                }
+            }
+        },
+        gauge: {
+            startAngle: 225,
+            endAngle: -45,
+            axisLine: {
+                show: true,
+                lineStyle: {
+                    color: [[0.2, '#86b379'], [0.8, '#68a54a'], [1, '#408829']],
+                    width: 8
+                }
+            },
+            axisTick: {
+                splitNumber: 10,
+                length: 12,
+                lineStyle: {
+                    color: 'auto'
+                }
+            },
+            axisLabel: {
+                textStyle: {
+                    color: 'auto'
+                }
+            },
+            splitLine: {
+                length: 18,
+                lineStyle: {
+                    color: 'auto'
+                }
+            },
+            pointer: {
+                length: '90%',
+                color: 'auto'
+            },
+            title: {
+                textStyle: {
+                    color: '#333'
+                }
+            },
+            detail: {
+                textStyle: {
+                    color: 'auto'
+                }
+            }
+        },
+        textStyle: {
+            fontFamily: 'Arial, Verdana, sans-serif'
+        }
+    }  ;
+
+</script>
+<script type="text/javascript">
+
+
+    $(document).ready(function () {
+        // define the date column index in datatable
+        dateArranger(7);
+        if ($('#echart_gauge').length) {
+
+            var echartGauge = echarts.init(document.getElementById('echart_gauge'), theme);
+
+            echartGauge.setOption({
+                tooltip: {
+                    formatter: "{a} <br/>{b} : {c}%"
+                },
+                series: [{
+                    name: 'Performance',
+                    type: 'gauge',
+                    center: ['50%', '50%'],
+                    startAngle: 140,
+                    endAngle: -140,
+                    min: 0,
+                    max: 100,
+                    precision: 0,
+                    splitNumber: 10,
+                    axisLine: {
+                        show: true,
+                        lineStyle: {
+                            color: [
+                                [0.2, '#9b58b6'],
+                                [0.4, '#3498db'],
+                                [0.8, '#89bb6e'],
+                                [1, '#26b99a']
+                            ],
+                            width: 30
+                        }
+                    },
+                    axisTick: {
+                        show: true,
+                        splitNumber: 5,
+                        length: 8,
+                        lineStyle: {
+                            color: '#eee',
+                            width: 1,
+                            type: 'solid'
+                        }
+                    },
+                    axisLabel: {
+                        show: true,
+                        formatter: function (v) {
+                            switch (v + '') {
+                                case '10':
+                                    return 'a';
+                                case '30':
+                                    return 'b';
+                                case '60':
+                                    return 'c';
+                                case '90':
+                                    return 'd';
+                                default:
+                                    return '';
+                            }
+                        },
+                        textStyle: {
+                            color: '#333'
+                        }
+                    },
+                    splitLine: {
+                        show: true,
+                        length: 30,
+                        lineStyle: {
+                            color: '#eee',
+                            width: 2,
+                            type: 'solid'
+                        }
+                    },
+                    pointer: {
+                        length: '80%',
+                        width: 8,
+                        color: 'auto'
+                    },
+                    title: {
+                        show: true,
+                        offsetCenter: ['-65%', -10],
+                        textStyle: {
+                            color: '#333',
+                            fontSize: 15
+                        }
+                    },
+                    detail: {
+                        show: true,
+                        backgroundColor: 'rgba(0,0,0,0)',
+                        borderWidth: 0,
+                        borderColor: '#ccc',
+                        width: 100,
+                        height: 40,
+                        offsetCenter: ['-60%', 10],
+                        formatter: '{value}% \n 0 / 60 Mins',
+                        textStyle: {
+                            color: 'auto',
+                            fontSize: 20
+                        }
+                    },
+                    data: [{
+                        value: 0,
+                        name: ' '
+                    }]
+                }]
+            });
+
+        }
+
+
+
+        if ($('#lineChart').length) {
+            var ctx = document.getElementById("lineChart");
+            var lineChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: [
+                    ],
+                    datasets: [{
+                        label: "minutes",
+                        backgroundColor: "rgba(38, 185, 154, 0.31)",
+                        borderColor: "rgba(38, 185, 154, 0.7)",
+                        pointBorderColor: "rgba(38, 185, 154, 0.7)",
+                        pointBackgroundColor: "rgba(38, 185, 154, 0.7)",
+                        pointHoverBackgroundColor: "#fff",
+                        pointHoverBorderColor: "rgba(220,220,220,1)",
+                        pointBorderWidth: 1,
+                        data: [
+                        ]
+                    }]
+                },
+            });
+        }
+
+        $("#filter_hourly").click(function () {
+            var from_to = $('#from_to_hourly').val();
+            var dates = [];
+            var durations = [];
+
+            $.post("http://extratikvoip.my/caller/call_duration_hourly",
+                {
+                    from_to: from_to,
+                    phone_number: "+905414922450"
+                },
+                function (data, status) {
+
+                    var obj = jQuery.parseJSON(data);
+                    var success = obj.success;
+
+                    if (success === true) {
+
+                        var hourly_calls_logs = obj.hourly_calls_logs;
+                        var i;
+                        for (i = 0; i < hourly_calls_logs.length; ++i) {
+                            dates.push(hourly_calls_logs[i].group_date.slice(0, -3));
+                            durations.push(Math.ceil(hourly_calls_logs[i].CallDuration / 60));
+                        }
+                        $('#canvas_line_chart').html(" <canvas  id='lineChart'></canvas>");
+                        if ($('#lineChart').length) {
+                            var ctx = document.getElementById("lineChart");
+                            var lineChart = new Chart(ctx, {
+                                type: 'line',
+                                data: {
+                                    labels: dates,
+                                    datasets: [{
+                                        label: "minutes",
+                                        backgroundColor: "rgba(38, 185, 154, 0.31)",
+                                        borderColor: "rgba(38, 185, 154, 0.7)",
+                                        pointBorderColor: "rgba(38, 185, 154, 0.7)",
+                                        pointBackgroundColor: "rgba(38, 185, 154, 0.7)",
+                                        pointHoverBackgroundColor: "#fff",
+                                        pointHoverBorderColor: "rgba(220,220,220,1)",
+                                        pointBorderWidth: 1,
+                                        data: durations
+                                    }]
+                                },
+                            });
+
+                            $('#hourlyModal').modal('hide');
+                        }
+
+                    } else {
+                        $('.waitModal').modal('show');
+                        $('#modal_content_text').html("something went wrong");
+                    }
+
+                });
+        });
+
+        $("#filter_daily").click(function () {
+            var from_to = $('#from_to_daily').val();
+            var dates = [];
+            var durations = [];
+
+            $.post("http://extratikvoip.my/caller/call_duration_daily",
+                {
+                    from_to_daily: from_to,
+                    phone_number: "+905414922450"
+                },
+                function (data, status) {
+
+                    var obj = jQuery.parseJSON(data);
+                    var success = obj.success;
+
+                    if (success === true) {
+
+                        var daily_calls_logs = obj.daily_calls_logs;
+                        var i;
+                        for (i = 0; i < daily_calls_logs.length; ++i) {
+                            dates.push(daily_calls_logs[i].group_date.slice(0, -9));
+                            durations.push(Math.ceil(daily_calls_logs[i].CallDuration / 60));
+                        }
+
+                        $('#canvas_line_chart').html(" <canvas  id='lineChart'></canvas>");
+                        if ($('#lineChart').length) {
+                            var ctx = document.getElementById("lineChart");
+                            var lineChart = new Chart(ctx, {
+                                type: 'line',
+                                data: {
+                                    labels: dates,
+                                    datasets: [{
+                                        label: "minutes",
+                                        backgroundColor: "rgba(38, 185, 154, 0.31)",
+                                        borderColor: "rgba(38, 185, 154, 0.7)",
+                                        pointBorderColor: "rgba(38, 185, 154, 0.7)",
+                                        pointBackgroundColor: "rgba(38, 185, 154, 0.7)",
+                                        pointHoverBackgroundColor: "#fff",
+                                        pointHoverBorderColor: "rgba(220,220,220,1)",
+                                        pointBorderWidth: 1,
+                                        data: durations
+                                    }]
+                                },
+                            });
+
+                            $('#dailyModal').modal('hide');
+                        }
+
+                    } else {
+                        $('.waitModal').modal('show');
+                        $('#modal_content_text').html("something went wrong");
+                    }
+
+                });
+        });
+
+        $("#filter_monthly").click(function () {
+            var from_to = $('#from_to_monthly').val();
+            var dates = [];
+            var durations = [];
+
+            $.post("http://extratikvoip.my/caller/call_duration_monthly",
+                {
+                    from_to_monthly: from_to,
+                    phone_number: "+905414922450"
+                },
+                function (data, status) {
+
+                    var obj = jQuery.parseJSON(data);
+                    var success = obj.success;
+
+                    if (success === true) {
+
+                        var monthly_calls_logs = obj.monthly_calls_logs;
+                        var i;
+                        for (i = 0; i < monthly_calls_logs.length; ++i) {
+                            dates.push(monthly_calls_logs[i].group_date.slice(0, -12));
+                            durations.push(Math.ceil(monthly_calls_logs[i].CallDuration / 60));
+                        }
+
+                        $('#canvas_line_chart').html(" <canvas  id='lineChart'></canvas>");
+                        if ($('#lineChart').length) {
+                            var ctx = document.getElementById("lineChart");
+                            var lineChart = new Chart(ctx, {
+                                type: 'line',
+                                data: {
+                                    labels: dates,
+                                    datasets: [{
+                                        label: "minutes",
+                                        backgroundColor: "rgba(38, 185, 154, 0.31)",
+                                        borderColor: "rgba(38, 185, 154, 0.7)",
+                                        pointBorderColor: "rgba(38, 185, 154, 0.7)",
+                                        pointBackgroundColor: "rgba(38, 185, 154, 0.7)",
+                                        pointHoverBackgroundColor: "#fff",
+                                        pointHoverBorderColor: "rgba(220,220,220,1)",
+                                        pointBorderWidth: 1,
+                                        data: durations
+                                    }]
+                                },
+                            });
+
+                            $('#monthlyModal').modal('hide');
+                        }
+
+                    } else {
+                        $('.waitModal').modal('show');
+                        $('#modal_content_text').html("something went wrong");
+                    }
+
+                });
+        });
+
+
+    });
+</script>
+</body>
+</html>
