@@ -1,7 +1,11 @@
 import React,{Component} from 'react';
+
 import {BrowserRouter as Router, Link, Route, Switch} from "react-router-dom";
 import {HeaderComponent} from "./header";
 import App from "../App";
+import ReactEcharts from "echarts-for-react";
+
+import {Modal, ModalBody, ModalFooter, ModalHeader} from "reactstrap";
 
 class LayerContainer extends Component{
     constructor(props){
@@ -10,6 +14,7 @@ class LayerContainer extends Component{
             getNumberValue:'',
             errorMessage:'you cannot enter characters',
             getClientsLogs:'clients logs',
+            openHourlyModal:false,
         }
     }
 
@@ -217,17 +222,107 @@ render() {
                                         <div className="clearfix"></div>
                                     </div>
                                     <div className="col-md-12 col-sm-12 col-xs-12" id="innerPie">
-                                        <iframe className="chartjs-hidden-iframe" style={IframStyle}> </iframe>
-                                        <div id="echart_gauge"
-                                             style={blaStyle}
-                                             _echarts_instance_="ec_1574413705966">
-                                            <div
-                                                style={blaStyle}>
-                                                <canvas width="759" height="370" data-zr-dom-id="zr_0"
-                                                        style={IframStyle}> </canvas>
-                                            </div>
-                                            <div></div>
-                                        </div>
+                                        <ReactEcharts
+                                            id={"daily-performance-chart"}
+                                            option={{
+                                                tooltip: {
+                                                    formatter: "{a} <br/>{b} : {c}%"
+                                                },
+                                                series: [{
+                                                    name: 'Performance',
+                                                    type: 'gauge',
+                                                    center: ['50%', '50%'],
+                                                    startAngle: 140,
+                                                    endAngle: -140,
+                                                    min: 0,
+                                                    max: 100,
+                                                    precision: 0,
+                                                    splitNumber: 10,
+                                                    axisLine: {
+                                                        show: true,
+                                                        lineStyle: {
+                                                            color: [
+                                                                [0.2, '#9b58b6'],
+                                                                [0.4, '#3498db'],
+                                                                [0.8, '#89bb6e'],
+                                                                [1, '#26b99a']
+                                                            ],
+                                                            width: 30
+                                                        }
+                                                    },
+                                                    axisTick: {
+                                                        show: true,
+                                                        splitNumber: 5,
+                                                        length: 8,
+                                                        lineStyle: {
+                                                            color: '#eee',
+                                                            width: 1,
+                                                            type: 'solid'
+                                                        }
+                                                    },
+                                                    axisLabel: {
+                                                        show: true,
+                                                        formatter: function (v) {
+                                                            switch (v + '') {
+                                                                case '10':
+                                                                    return 'a';
+                                                                case '30':
+                                                                    return 'b';
+                                                                case '60':
+                                                                    return 'c';
+                                                                case '90':
+                                                                    return 'd';
+                                                                default:
+                                                                    return '';
+                                                            }
+                                                        },
+                                                        textStyle: {
+                                                            color: '#333'
+                                                        }
+                                                    },
+                                                    splitLine: {
+                                                        show: true,
+                                                        length: 30,
+                                                        lineStyle: {
+                                                            color: '#eee',
+                                                            width: 2,
+                                                            type: 'solid'
+                                                        }
+                                                    },
+                                                    pointer: {
+                                                        length: '80%',
+                                                        width: 8,
+                                                        color: 'auto'
+                                                    },
+                                                    title: {
+                                                        show: true,
+                                                        offsetCenter: ['-65%', -10],
+                                                        textStyle: {
+                                                            color: '#333',
+                                                            fontSize: 15
+                                                        }
+                                                    },
+                                                    detail: {
+                                                        show: true,
+                                                        backgroundColor: 'rgba(0,0,0,0)',
+                                                        borderWidth: 0,
+                                                        borderColor: '#ccc',
+                                                        width: 100,
+                                                        height: 40,
+                                                        offsetCenter: ['-60%', 10],
+                                                        formatter: '{value}% \n 0 / 60 Mins',
+                                                        textStyle: {
+                                                            color: 'auto',
+                                                            fontSize: 20
+                                                        }
+                                                    },
+                                                    data: [{
+                                                        value: 1,
+                                                        name: ' '
+                                                    }]
+                                                }]
+                                            }}
+                                        />
                                     </div>
                                 </div>
                             </div>
@@ -238,121 +333,36 @@ render() {
                                         <div className="clearfix"></div>
                                     </div>
                                     <h4><i> Calls duration chart </i></h4>
-                                    <button type="button" className="btn btn-default btn-sm" data-toggle="modal"
-                                            data-target="#hourlyModal">
+                                    <button type="button" onClick={this.props.openHourlyModal} className="btn btn-default btn-sm"
+                                            >
                                         Hourly
                                     </button>
-                                    <button type="button" className="btn btn-default btn-sm" data-toggle="modal"
-                                            data-target="#dailyModal">
+                                    <button type="button" onClick={this.openDailyModal}  className="btn btn-default btn-sm"
+                                            >
                                         Daily
                                     </button>
-                                    <button type="button" className="btn btn-default btn-sm" data-toggle="modal"
-                                            data-target="#monthlyModal">
+                                    <button type="button" onClick={this.openMonthlyModal}  className="btn btn-default btn-sm">
                                         Monthly
                                     </button>
-                                    <div className="modal fade" id="hourlyModal" tabindex="-1" role="dialog"
-                                         aria-labelledby="hourlyModal">
-                                        <div className="modal-dialog" role="document">
-                                            <div className="modal-content">
-                                                <div className="modal-header">
-                                                    <button type="button" className="close" data-dismiss="modal"
-                                                            aria-label="Close"><span aria-hidden="true">×</span></button>
-                                                    <h4 className="modal-title" id="myModalLabel"> Duration filter </h4>
-                                                </div>
-                                                <div className="modal-body">
-                                                    <div className="row">
-                                                        <h5>Please filter search date range .</h5>
-                                                        <div className="col-md-12  xdisplay_inputx form-group has-feedback">
-                                                            <input required="required" type="text" name="from_to_hourly"
-                                                                   id="from_to_hourly"
-                                                                   className="form-control has-feedback-left has-date-picker daterange"
-                                                                   placeholder="2019-11-22" />
-                                                            <span  className="fa fa-calendar-o form-control-feedback left" aria-hidden="true"> </span>
-                                                        </div>
-                                                    </div>
 
-                                                </div>
-                                                <div className="modal-footer">
-                                                    <button type="button" className="btn btn-default"
-                                                            data-dismiss="modal">Close
-                                                    </button>
-                                                    <button type="button" id="filter_hourly"
-                                                            className="btn btn-primary">Search
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="modal fade" id="dailyModal" tabindex="-1" role="dialog"
-                                         aria-labelledby="dailyModal">
-                                        <div className="modal-dialog" role="document">
-                                            <div className="modal-content">
-                                                <div className="modal-header">
-                                                    <button type="button" className="close" data-dismiss="modal"
-                                                            aria-label="Close"><span aria-hidden="true">×</span></button>
-                                                    <h4 className="modal-title" id="myModalLabel">Duration filter</h4>
-                                                </div>
-                                                <div className="modal-body">
-                                                    <div className="row">
-                                                        <h5>Please filter search date range .</h5>
-                                                        <div
-                                                            className=" col-md-12  xdisplay_inputx form-group has-feedback">
-                                                            <input required="required" type="text" name="from_to_hourly"
-                                                                   id="from_to_daily"
-                                                                   className="form-control has-feedback-left has-date-picker daterange"
-                                                                   placeholder="2019-11-22" />
-                                                            <span className="fa fa-calendar-o form-control-feedback left" aria-hidden="true"> </span>
-                                                        </div>
-                                                    </div>
 
-                                                </div>
-                                                <div className="modal-footer">
-                                                    <button type="button" className="btn btn-default"
-                                                            data-dismiss="modal">Close
-                                                    </button>
-                                                    <button type="button" id="filter_daily"
-                                                            className="btn btn-primary">Search
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="modal fade" id="monthlyModal" tabindex="-1" role="dialog"
-                                         aria-labelledby="monthlyModal">
-                                        <div className="modal-dialog" role="document">
-                                            <div className="modal-content">
-                                                <div className="modal-header">
-                                                    <button type="button" className="close" data-dismiss="modal"
-                                                            aria-label="Close"><span aria-hidden="true">×</span></button>
-                                                    <h4 className="modal-title" id="myModalLabel">Duration filter</h4>
-                                                </div>
-                                                <div className="modal-body">
-                                                    <div className="row">
-                                                        <h5>Please filter search date range .</h5>
-                                                        <div className=" col-md-12 xdisplay_inputx form-group has-feedback">
-                                                            <input required="required" type="text" name="from_to_monthly"
-                                                                   id="from_to_monthly"
-                                                                   className="form-control has-feedback-left has-date-picker daterange"
-                                                                   placeholder="2019-11-22" />
-                                                            <span className="fa fa-calendar-o form-control-feedback left"  aria-hidden="true"> </span>
-                                                        </div>
-                                                    </div>
 
-                                                </div>
-                                                <div className="modal-footer">
-                                                    <button type="button" className="btn btn-default"
-                                                            data-dismiss="modal">Close
-                                                    </button>
-                                                    <button type="button" id="filter_monthly"
-                                                            className="btn btn-primary">Search
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                     <div className="col-md-12 col-sm-12 col-xs-12" id="canvas_line_chart">
-                                        <iframe className="chartjs-hidden-iframe" style={IframStyle} > </iframe>
-                                        <canvas id="lineChart" width="751" height="375" style={IframStyle} > </canvas>
+                                        <ReactEcharts id={"line-chart"}
+                                            option={{
+                                                xAxis: {
+                                                    type: "category",
+                                                    data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+                                                },
+                                                yAxis: {
+                                                    type: "value"
+                                                },
+                                                series: [{
+                                                    data: [820, 932, 901, 934, 1290, 1330, 1320],
+                                                    type: "line"
+                                                }]
+                                            }}
+                                        />
                                     </div>
                                 </div>
                             </div>

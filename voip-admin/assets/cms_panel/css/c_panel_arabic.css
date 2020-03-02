@@ -1,0 +1,85 @@
+.form-title-left{
+	float: right !important;
+}
+.banner{
+	direction: rtl;
+}
+.DataTables_sort_wrapper{
+	text-align: right;
+}
+.buttons-box{
+/*	float: right;*/
+}
+.floatL{
+	float: right;
+}
+div.form-button-box{
+	float: right !important;
+	    margin-right: 10px!important;;
+}
+
+.datatables , .dataTables_wrapper, .form-content , .form-div , .form-field-box,.datatables-add-button
+{
+	
+	direction: rtl !important;
+}
+.form-display-as-box , .form-input-box
+{
+	float:right !important;
+}
+.chzn-container span
+{
+	margin-right : 40px !important;
+}
+.form-display-as-box .required
+{
+	display:inline-block;
+	color : red;
+	margin: auto 3px;
+}
+body, .flexigrid, .flexigrid div.form-div, input, button, select, textarea, 
+
+.flexigrid div.form-div input[type="text"], .flexigrid div.form-div select, .flexigrid div.form-div textarea {
+	
+	font-weight:100;
+}
+#sidebar, .form-input-box, .form-display-as-box, 
+.flexigrid .ftitle-left, .navbar .brand ,.buttons-box,{
+	float:right;
+}
+.text-left {
+	text-align:right;
+}
+.chzn-container-single .chzn-single abbr {
+	left:26px;
+	right:inherit;
+}
+.flexigrid div.form-button-box {
+    float: right;
+    margin-left: 0;
+    margin-right: 10px;
+}
+.flexigrid div.mDiv div.ptogtitle {
+	left: 3px;
+	right:inherit;
+}
+.navbar-inner .nav-collapse.collapse, .navbar .nav.pull-right {
+	float:left;
+}
+.chzn-container-single .chzn-drop {
+/*	display:none !important;*/
+}
+.chzn-container-active.chzn-container-single .chzn-drop {
+	/*display:block !important;*/
+}
+
+.dropdown-menu li{
+	float: right;
+	width: 100%;
+}
+.top-nav>.open>.dropdown-menu>li>a{
+	text-align: right;
+}
+tbody tr{
+	font-family: tahooma;
+}

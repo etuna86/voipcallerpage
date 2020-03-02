@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 //import 'bootstrap/dist/css/bootstrap.min.css';
+import 'react-date-range/dist/styles.css';
+import 'react-date-range/dist/theme/default.css';
 import './index.css';
 import reducers from '../redux';
 
 import { Provider } from 'react-redux';
-import { createStore } from 'redux'
+import { createStore } from 'redux';
 
 export const store = createStore(reducers);
 

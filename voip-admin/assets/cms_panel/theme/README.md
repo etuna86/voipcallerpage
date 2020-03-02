@@ -1,0 +1,49 @@
+پنل مدیریت فارسی	
+	
+ - پیش نمایش پنل		
+ -![Gentelella Bootstrap Admin Template](http://mrpazooki.com/img/index-rtl.jpg "Gentelella Theme پیش نمایش")		
+ 
+ -## Scripts included:		
+ -* Bootstrap		
+ -* Font Awesome		
+ -* jQuery-Autocomplete		
+ -* FullCalendar		
+ -* Charts.js		
+ -* Bootstrap Colorpicker		
+ -* Cropper		 
+ -* dataTables		
+ -* Date Range Picker for Bootstrap		
+ -* Dropzone		
+ -* easyPieChart		
+ -* ECharts		
+ -* bootstrap-wysiwyg		
+ -* Flot - Javascript plotting library for jQuery.		
+ -* gauge.js		
+ -* iCheck		
+ -* jquery.inputmask plugin		
+ -* Ion.RangeSlider		
+ -* jQuery		
+ -* jVectorMap		
+ -* moment.js		
+ -* Morris.js - pretty time-series line graphs		
+ -* jquery-nicescroll plugin		
+ -* PNotify - Awesome JavaScript notifications		
+ -* NProgress		
+ -* Pace		
+ -* Parsley		
+ -* bootstrap-progressbar		
+ -* select2		
+ -* Sidebar Transitions - simple off-canvas navigations		
+ -* Skycons - canvas based wather icons		
+ -* jQuery Sparklines plugin		
+ -* switchery - Turns HTML checkbox inputs into beautiful iOS style switches		
+ -* jQuery Tags Input Plugin		
+ -* Autosize - resizes text area to fit text		
+ -* validator - HTML from validator using jQuery		
+ -* jQuery Smart Wizard		
+
+ -## License information		
+ -Gentellela is licensed under The MIT License (MIT). Which means that you can use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software. But you always need to state that Colorlib is the original author of this template.		
+ -		
+ -Project is developed and maintained by [Colorlib](https://colorlib.com/ "Colorlib - Make Your First Blog") and Aigars Silkalns
+  -	Project is RTL by [Mohammad Reza Pazooki](http://mrpazooki.com/ "Mohammad Reza Pazooki")

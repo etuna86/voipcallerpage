@@ -24,7 +24,7 @@ $bluecolor:#0071BC;
 $lightbluecolor:#0BAAD2;
 $lightbluecolortwo:#10B3D6;
 $weightgrey:#4D4D4D;
-$greencolor:#006837;
+$greencolor:#36e131;
 $greyweightcolor:#808080;
 $tablesgrey:#8E8E8E;
 $tablesbordergrey:#8E8E8E;
@@ -32,8 +32,9 @@ $tablesborderblue:#29ABE2;
 $usersettinggrey:#B3B3B3;
 $supportinputgrey:#F3F5F4;
 $cdngrey:#E6E6E6;
-$pinkColor:#b17986;
 $heightRedColor : #412129;
+$heightRedColoropacity05 : rgba(65, 33, 41, 0.5);
+$pinkColor:#b17986;
 @mixin headershadow()
 {
   background : -moz-linear-gradient(50% 100% 90deg,rgba(0, 0, 0, 0) 1.62%,rgba(0, 0, 0, 0.09) 10.44%,rgba(0, 0, 0, 1) 100%);
@@ -104,7 +105,15 @@ $heightRedColor : #412129;
   float: right;
 }
 
-
+@mixin arrowDown()
+{
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0px 15px 15px 15px;
+  border-color: transparent transparent $whitecolorpacity05 transparent;
+  float: left;
+}
 
 @mixin circleRed()
 {
@@ -156,15 +165,15 @@ $heightRedColor : #412129;
 }
 @mixin boxshadowTwo()
 {
--webkit-box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.75);
--moz-box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.75);
-box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.75);
 }
 @mixin boxshadowhover()
 {
-  -webkit-box-shadow: 0px 0px 30px rgba(0,0,0,0.15);
-  -moz-box-shadow: 0px 0px 30px rgba(0,0,0,0.15);
-  box-shadow: 0px 0px 30px rgba(0,0,0,0.15);
+  -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.15);
+  -moz-box-shadow: 0px 0px 10px rgba(0,0,0,0.15);
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.15);
 }
 @mixin transitionMethod($time)
 {

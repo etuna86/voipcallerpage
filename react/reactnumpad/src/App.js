@@ -2,7 +2,10 @@ import React,{Component} from 'react';
 import HeaderComponent from './component/header';
 import Login from './login';
 import LayerContainer from './component/layercontainer';
+import { DateRangePicker } from 'react-date-range';
+
 import { createBrowserHistory } from "history";
+
 import {connect} from 'react-redux';
 const history = createBrowserHistory();
 import {
@@ -11,6 +14,7 @@ import {
     Route,
     Link, withRouter
 } from "react-router-dom";
+import {Modal, ModalBody, ModalFooter, ModalHeader} from "reactstrap";
 
 class App extends Component{
   constructor(props){
@@ -19,7 +23,15 @@ class App extends Component{
         getNumberValue:'',
         errorMessage:'you cannot enter characters',
         getClientsLogs:'clients logs',
+        openHourlyModal:false,
+        selectionRange:[{
+            startDate:new Date(),
+            endDate: new Date(),
+            key: 'selection'
+        }],
     }
+
+      this.handleSelect = this.handleSelect.bind(this);
   }
     componentDidMount() {
         history.push('/login');
@@ -122,6 +134,26 @@ numberChange=(e)=>{
         })
     }
 }
+    openHourlyModal=()=>{
+      console.warn("openHourlyModal",this.state.openHourlyModal);
+        this.setState({
+            openHourlyModal:!this.state.openHourlyModal,
+        })
+
+
+    }
+    openDailyModal=()=>{
+
+    }
+    openMonthlyModal=()=>{
+
+    }
+    handleSelect(ranges){
+      console.warn("selectionRange: ",this.state.selectionRange);
+        this.setState((state)=>{
+            state.selectionRange[0]=ranges.selection;
+        })
+    }
   render() {
       const divStyle = {
           display: 'none',
@@ -224,9 +256,28 @@ numberChange=(e)=>{
                           </div>
                       </div>
                   </div>
-              <LayerContainer />
+              <LayerContainer
+                  openHourlyModal={this.openHourlyModal}
+              />
+
               </Route>
       </Switch>
+          <Modal zIndex={"999999"} className={"scale newpass-modal"} isOpen={this.state.openHourlyModal}  toggle={this.openHourlyModal}  role={"dialog"} >
+              <ModalHeader toggle={this.openHourlyModal}  >Hourly</ModalHeader>
+              <ModalBody>
+                  <DateRangePicker
+                      onChange={ranges => this.handleSelect(ranges)}
+                      showSelectionPreview={true}
+                      moveRangeOnFirstSelection={false}
+                      months={1}
+                      ranges={this.state.selectionRange}
+                      direction="horizontal"
+                  />
+              </ModalBody>
+              <ModalFooter>
+
+              </ModalFooter>
+          </Modal>
       </Router>
   );
   }

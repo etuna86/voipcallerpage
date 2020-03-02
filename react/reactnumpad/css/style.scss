@@ -6,6 +6,9 @@ body {
   background-size: cover;
   height: 100vh;
 }
+.modal{
+  z-index: 999999;
+}
 .card-dashboard-graph{
   overflow-y: scroll;
   height: calc(100vh - 200px);

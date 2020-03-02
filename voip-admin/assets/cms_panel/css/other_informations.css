@@ -1,0 +1,46 @@
+.container_c_other{
+	margin-top:50px;
+}
+.container_other_informations{
+	margin-top: 50px;
+}
+.textarea_value,.input_value{
+	width: 96%;
+	max-height: 100%;
+	padding-left: 2%;
+	padding-right: 2%;
+}
+.input_value{
+	min-height: 40px;
+}
+.textarea_value{
+	max-width: 96%;
+}
+.row_one{
+	margin-bottom: 20px;
+}
+.row_title{
+	background-color: #000000;
+	color: #fff;
+	padding: 10px;
+	font-size: 15px;
+	font-weight: bold;
+	text-align: center;
+}
+.row_btn{
+	padding: 5px;
+}
+.row_arabic{
+/*	font-family: "GESSTwoMedium-Medium" !important;*/
+	font-weight: 400;
+	float: right;
+}
+.row_arabic .save_btn{
+/*	font-family: "GESSTwoMedium-Medium" !important;*/
+}
+@media (max-width:998px){
+	.row_arabic{
+		float: none;
+		margin-bottom: 20px;
+	}
+}
